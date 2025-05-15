@@ -1,9 +1,9 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import Header from '../components/Header.astro';
-
+import Header from "../components/Header.astro";
+import Badge from "../components/Badge.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -11,5 +11,22 @@ import Header from '../components/Header.astro';
 
 <Layout>
 
-	
+  <main>
+
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Diego Pastén
+        <div class="flex justify-center items-center">
+            <Badge>Disponible para trabajar</Badge>
+        </div>
+    </h1>
+    <span>Desarrollador WEB</span>
+      <p class="text-xl">
+        Experience your color palette in a real website environment. See how
+        your colors work together in different contexts and components.
+      </p>
+    </section>
+
+  </main>
+
 </Layout>

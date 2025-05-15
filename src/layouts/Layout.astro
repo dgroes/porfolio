@@ -1,10 +1,12 @@
 ---
 import Header from "../components/Header.astro";
+// import "../styles/global.css";
 import BackgroundSVG from "../components/Background.astro";
 ---
 
 <!doctype html>
 <html lang="es">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -12,21 +14,14 @@ import BackgroundSVG from "../components/Background.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
   </head>
-  <!-- <body class="bg-gradient-to-r from-[#0f172a] to-[#334155]"> -->
-	 <body class="background-color: #070f2b;
-background-image: radial-gradient(at 2% 57%, #070f2b 0%, transparent 60%), radial-gradient(at 86% 0%, #1b1a55 0%, transparent 50%), radial-gradient(at 51% 76%, #535c91 0%, transparent 40%), radial-gradient(at 94% 43%, #9290c3 0%, transparent 30%); h-lvh ">
-		 <!-- Componente SVG como fondo -->
-    <!-- <BackgroundSVG opacity="0.75" /> -->
-    <Header />
-    <slot />
+
+  <body
+    class="background-color: #070f2b; background-image: radial-gradient(at 2% 57%, #070f2b 0%, transparent 60%), radial-gradient(at 86% 0%, #1b1a55 0%, transparent 50%), radial-gradient(at 51% 76%, #535c91 0%, transparent 40%), radial-gradient(at 94% 43%, #9290c3 0%, transparent 30%); h-lvh"
+  >
+
+  
+  <Header />
+  <slot />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-   
-      background: radial-gradient(at 92% 50%, #16213e 0px, transparent 50%), radial-gradient(at 50% 88%, #0f3460 0px, transparent 50%), radial-gradient(at 99% 21%, #533483 0px, transparent 50%), #16213e;
-    
-  }
-</style>
+<style></style>
