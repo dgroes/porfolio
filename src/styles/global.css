@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("/fonts/GeneralSans-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Array";
+    src: url("/fonts/Array-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  background: 
+    radial-gradient(at 92% 50%, #16213e 0px, transparent 50%),
+    radial-gradient(at 50% 88%, #0f3460 0px, transparent 50%),
+    radial-gradient(at 99% 21%, #533483 0px, transparent 50%), #16213e;
+}
+
+body {
+  /* font-family: "GeneralSans", sans-serif; */
+  font-family: "Array";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+header {
+  font-family: "GeneralSans";
+}
