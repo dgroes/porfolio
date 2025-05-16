@@ -18,26 +18,126 @@
     font-display: swap;
 }
 
+@font-face{
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* C01: Esquemas de colores soportables */
 :root {
   color-scheme: light dark;
+  --color-primary: #ffbed8;
 }
 
 html {
-  background: 
+  /* background: 
     radial-gradient(at 92% 50%, #16213e 0px, transparent 50%),
     radial-gradient(at 50% 88%, #0f3460 0px, transparent 50%),
-    radial-gradient(at 99% 21%, #533483 0px, transparent 50%), #16213e;
+    radial-gradient(at 99% 21%, #533483 0px, transparent 50%), #16213e; */
+
+    /* background-color: #254336;
+background-image: radial-gradient(at 51% 27%, #254336 0%, transparent 60%), radial-gradient(at 28% 43%, #6b8a7a 0%, transparent 50%), radial-gradient(at 74% 85%, #b7b597 0%, transparent 40%), radial-gradient(at 42% 0%, #dad3be 0%, transparent 30%); */
+  
+/* background-color: #204051;
+  background-image: radial-gradient(at 56% 96%, #204051 0%, transparent 60%), radial-gradient(at 63% 20%, #3b6978 0%, transparent 50%), radial-gradient(at 45% 54%, #84a9ac 0%, transparent 40%), radial-gradient(at 42% 74%, #cae8d5 0%, transparent 30%); */
+
+  background-color: #2e3837;
+background-image: radial-gradient(at 34% 28%, #2e3837 0%, transparent 60%), radial-gradient(at 53% 57%, #166678 0%, transparent 50%), radial-gradient(at 65% 26%, #7db9b3 0%, transparent 40%), radial-gradient(at 12% 95%, #e1f6f4 0%, transparent 30%);
+
 }
 
 body {
   /* font-family: "GeneralSans", sans-serif; */
-  font-family: "Array";
+  /* font-family: "Array"; */
+  /* font-family: "Satoshi"; */
+  font-family: "Switzer";
   display: flex;
   flex-direction: column;
-  justify-content: center;
   min-height: 100dvh;
 }
-
+/* h1, h2{
+  font-family: "Array";
+}
+ */
 header {
   font-family: "GeneralSans";
+}
+
+/* .clip-triangle-rounded {
+    clip-path: path('M70 0 C30 0 0 50 0 100 C0 150 30 200 70 200 C110 2002 160 150 160 100 C160 50 110 0 70 0 Z');
+} */
+
+.perfil-con-difuminado {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+
+.carousel-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.carousel li {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  list-style: none;
+}
+
+.carousel-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.carousel img{
+  height: 240px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-controls a {
+  background-color: #ddd;
+  padding: 0.5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.carousel-controls a:hover {
+  background-color: #bbb;
 }
