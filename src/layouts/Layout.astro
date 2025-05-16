@@ -6,7 +6,6 @@ import BackgroundSVG from "../components/Background.astro";
 
 <!doctype html>
 <html lang="es">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -15,13 +14,11 @@ import BackgroundSVG from "../components/Background.astro";
     <title>Astro Basics</title>
   </head>
 
-  <body
-    class="background-color: #070f2b; background-image: radial-gradient(at 2% 57%, #070f2b 0%, transparent 60%), radial-gradient(at 86% 0%, #1b1a55 0%, transparent 50%), radial-gradient(at 51% 76%, #535c91 0%, transparent 40%), radial-gradient(at 94% 43%, #9290c3 0%, transparent 30%); h-lvh"
-  >
-
-  
-  <Header />
-  <slot />
+  <!-- <body class="background-color: #070f2b; background-image: radial-gradient(at 2% 57%, #070f2b 0%, transparent 60%), radial-gradient(at 86% 0%, #1b1a55 0%, transparent 50%), radial-gradient(at 51% 76%, #535c91 0%, transparent 40%), radial-gradient(at 94% 43%, #9290c3 0%, transparent 30%); h-lvh">
+    -->
+  <body>
+    <Header />
+    <slot />
   </body>
 </html>
 <style></style>
