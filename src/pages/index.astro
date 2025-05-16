@@ -11,8 +11,8 @@ import Badge from "../components/Badge.astro";
 
 <Layout>
   <main>
-    <section class="w-full lg:w-[1040px] mx-auto py-44">
-       <img
+    <section class="w-full lg:w-[1040px] mx-auto py-30">
+      <img
         src="/images/perfil.png"
         alt="Foto de perfil"
         class="perfil-con-difuminado"
@@ -28,7 +28,6 @@ import Badge from "../components/Badge.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-     
 
       <span class="text-xl text-[#ffbed8]">Desarrollador WEB</span>
       <p class="text-2xl opacity-75">
@@ -38,10 +37,12 @@ import Badge from "../components/Badge.astro";
         Temporibus velit voluptate cum nemo quis dignissimos ipsum, consequuntur
         optio!
       </p>
+    </section>
 
-      <h2 class="text-6xl mt-8 mb-3">Proyectos</h2>
+    <section class="w-full lg:w-[1040px] mx-auto">
+      <h2 class="text-6xl font-bold mt-8 mb-3">Proyectos</h2>
       <article
-        class="border-green-50 border-2 rounded-2xl bg-green-50 bg-opacity-20 grid grid-cols-[1fr_2fr] gap-6 p-6"
+        class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6"
       >
         <section class="carousel-container relative">
           <ul class="carousel" role="list">
@@ -49,36 +50,47 @@ import Badge from "../components/Badge.astro";
               <img
                 src="/images/proyecto-prueba.avif"
                 alt="Imagen 1"
-                class="carousel-img "
+                class="carousel-img"
               />
             </li>
             <li id="slide2">
               <img
                 src="/images/proyecto-prueba.avif"
                 alt="Imagen 2"
-                class="carousel-img "
+                class="carousel-img"
               />
             </li>
             <li id="slide3">
               <img
                 src="/images/proyecto-prueba.avif"
                 alt="Imagen 3"
-                class="carousel-img "
+                class="carousel-img"
               />
             </li>
           </ul>
 
-           <div class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"> <!-- Cambios aquí -->
-            <a href="#slide1" class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"></a>
-            <a href="#slide2" class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"></a>
-            <a href="#slide3" class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"></a>
+          <div
+            class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
+          >
+            <!-- Cambios aquí -->
+            <a
+              href="#slide1"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+            <a
+              href="#slide2"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+            <a
+              href="#slide3"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
           </div>
         </section>
 
         <div>
-
-          <h1 class="text-2xl font-bold">Advanced Color Tools</h1>
-          <p class="text-xl">
+          <h1 class="text-2xl font-bold mb-2">Advanced Color Tools</h1>
+          <p class="text-xl mb-2">
             Take your color palette to the next level with our comprehensive
             suite of tools designed for both beginners and professionals.
           </p>

@@ -40,20 +40,34 @@
   --color-primary: #ffbed8;
 }
 
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+
+
 html {
-  /* background: 
-    radial-gradient(at 92% 50%, #16213e 0px, transparent 50%),
-    radial-gradient(at 50% 88%, #0f3460 0px, transparent 50%),
-    radial-gradient(at 99% 21%, #533483 0px, transparent 50%), #16213e; */
+    /* background: 
+      radial-gradient(at 92% 50%, #16213e 0px, transparent 50%),
+      radial-gradient(at 50% 88%, #0f3460 0px, transparent 50%),
+      radial-gradient(at 99% 21%, #533483 0px, transparent 50%), #16213e; */
 
-    /* background-color: #254336;
-background-image: radial-gradient(at 51% 27%, #254336 0%, transparent 60%), radial-gradient(at 28% 43%, #6b8a7a 0%, transparent 50%), radial-gradient(at 74% 85%, #b7b597 0%, transparent 40%), radial-gradient(at 42% 0%, #dad3be 0%, transparent 30%); */
-  
-/* background-color: #204051;
-  background-image: radial-gradient(at 56% 96%, #204051 0%, transparent 60%), radial-gradient(at 63% 20%, #3b6978 0%, transparent 50%), radial-gradient(at 45% 54%, #84a9ac 0%, transparent 40%), radial-gradient(at 42% 74%, #cae8d5 0%, transparent 30%); */
+      /* background-color: #254336; background-image: radial-gradient(at 51% 27%, #254336 0%, transparent 60%), radial-gradient(at 28% 43%, #6b8a7a 0%, transparent 50%), radial-gradient(at 74% 85%, #b7b597 0%, transparent 40%), radial-gradient(at 42% 0%, #dad3be 0%, transparent 30%); */
+    
+      /* background-color: #204051; background-image: radial-gradient(at 56% 96%, #204051 0%, transparent 60%), radial-gradient(at 63% 20%, #3b6978 0%, transparent 50%), radial-gradient(at 45% 54%, #84a9ac 0%, transparent 40%), radial-gradient(at 42% 74%, #cae8d5 0%, transparent 30%); */
 
-  background-color: #2e3837;
-background-image: radial-gradient(at 34% 28%, #2e3837 0%, transparent 60%), radial-gradient(at 53% 57%, #166678 0%, transparent 50%), radial-gradient(at 65% 26%, #7db9b3 0%, transparent 40%), radial-gradient(at 12% 95%, #e1f6f4 0%, transparent 30%);
+      /*  background-color: #2e3837; background-image: radial-gradient(at 34% 28%, #2e3837 0%, transparent 60%), radial-gradient(at 53% 57%, #166678 0%, transparent 50%), radial-gradient(at 65% 26%, #7db9b3 0%, transparent 40%), radial-gradient(at 12% 95%, #e1f6f4 0%, transparent 30%);*/
+
+      background: radial-gradient(at 24.892241379310345% 69.09722010294597%, #222222 0px, transparent 50%), radial-gradient(at 29.74137931034483% 36.38888676961263%, #14494e 0px, transparent 50%), radial-gradient(at 71.875% 18.888886769612633%, #456356 0px, transparent 50%), radial-gradient(at 55.81896551724138% 94.9305534362793%, #596f6f 0px, transparent 50%), #343434;
+    
+      /* background-color: #070f2b; background-image: radial-gradient(at 87% 17%, #070f2b 0%, transparent 60%), radial-gradient(at 58% 69%, #1b1a55 0%, transparent 50%), radial-gradient(at 2% 68%, #535c91 0%, transparent 40%), radial-gradient(at 82% 15%, #9290c3 0%, transparent 30%);*/
+
+      /*  background-color: #000000; background-image: radial-gradient(at 28% 42%, #000000 0%, transparent 60%), radial-gradient(at 80% 11%, #4e4feb 0%, transparent 50%), radial-gradient(at 47% 60%, #068fff 0%, transparent 40%), radial-gradient(at 53% 87%, #eeeeee 0%, transparent 30%);*/
+
+      /*  background: radial-gradient(at 75% 1%, #f4f5db 0px, transparent 50%), radial-gradient(at 66% 77%, #d9dab0 0px, transparent 50%), radial-gradient(at 27% 94%, #487e95 0px, transparent 50%), radial-gradient(at 94% 5%, #23689b 0px, transparent 50%), radial-gradient(at 28% 70%, #7b61b6 0px, transparent 50%), radial-gradient(at 50% 15%, #532ea4 0px, transparent 50%), #09203f;*/
+
+      /* background: linear-gradient(to right, #0f172a, #334155); */
+
 
 }
 
@@ -105,20 +119,24 @@ header {
 }
 
 .carousel li {
+  position: relative;
   flex: 0 0 100%;
   scroll-snap-align: center;
   list-style: none;
+  aspect-ratio: 1 / 1; /* Mantiene cuadrado el <li> */
 }
 
 .carousel-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: contain; /* Quepa toda la imagen sin recortar */
   border-radius: 0.5rem;
 }
 
 .carousel img{
-  height: 240px;
+  height: 200px;
 }
 
 .carousel-controls {
@@ -129,7 +147,7 @@ header {
 }
 
 .carousel-controls a {
-  background-color: #ddd;
+  background-color: var(--color-primary);
   padding: 0.5rem;
   border-radius: 50%;
   text-decoration: none;
