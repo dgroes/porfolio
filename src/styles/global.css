@@ -40,6 +40,15 @@
   --color-primary: #ffbed8;
 }
 
+h1, h2{
+  font-family: "GeneralSans";
+}
+
+p{
+  /* C02: Margin Block lh */
+  margin-block: 1lh;
+}
+
 .bg-primary {
   background-color: var(--color-primary);
 }
@@ -68,18 +77,26 @@ html {
 
       /* background: linear-gradient(to right, #0f172a, #334155); */
 
-
+  scroll-behavior: smooth;
 }
 
 body {
   /* font-family: "GeneralSans", sans-serif; */
   /* font-family: "Array"; */
-  /* font-family: "Satoshi"; */
-  font-family: "Switzer";
+  font-family: "Satoshi";
+  /* font-family: "Switzer"; */
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  
 }
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+
+
 /* h1, h2{
   font-family: "Array";
 }
@@ -123,7 +140,8 @@ header {
   flex: 0 0 100%;
   scroll-snap-align: center;
   list-style: none;
-  aspect-ratio: 1 / 1; /* Mantiene cuadrado el <li> */
+  aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+  overflow: hidden; /* Para que no se vea fuera del cuadrado */
 }
 
 .carousel-img {
@@ -131,12 +149,13 @@ header {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Quepa toda la imagen sin recortar */
+  object-fit: cover; /* Aquí está el cambio importante */
   border-radius: 0.5rem;
 }
 
+
 .carousel img{
-  height: 200px;
+  /* height: 200px; */
 }
 
 .carousel-controls {
