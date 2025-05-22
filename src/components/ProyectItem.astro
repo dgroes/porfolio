@@ -1,1 +1,64 @@
-k
+---
+interface Props {
+  title: string;
+  description: string;
+  functionality: string[];
+  link?: string;
+  image?: string;
+}
+const { title, description, functionality, link, image } = Astro.props;
+---
+
+<section class="carousel-container relative">
+  <ul class="carousel" role="list">
+    <li id="slide1">
+      <img
+        src="/images/proyecto-prueba.avif"
+        alt="Imagen 1"
+        class="carousel-img"
+      />
+    </li>
+    <li id="slide2">
+      <img
+        src="/images/proyecto-prueba.avif"
+        alt="Imagen 2"
+        class="carousel-img"
+      />
+    </li>
+    <li id="slide3">
+      <img
+        src="/images/proyecto-prueba.avif"
+        alt="Imagen 3"
+        class="carousel-img"
+      />
+    </li>
+  </ul>
+
+  <div
+    class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
+  >
+    <!-- Cambios aquí -->
+    <a
+      href="#slide1"
+      class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"></a>
+    <a
+      href="#slide2"
+      class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"></a>
+    <a
+      href="#slide3"
+      class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"></a>
+  </div>
+</section>
+
+<div>
+  <h1 class="text-3xl font-bold mb-1">{title}</h1>
+  <p class="text-xl mb-2">
+    {description}
+  </p>
+
+  <!-- Funionabilidad -->
+  <ul class="grid grid-cols-2 gap-2 my-4">
+    {functionality.map((item) => <li class="">{item}</li>)}
+  </ul>
+  <a href={link} class="text-[#ac70c4]">Mas sobre el proyecto</a>
+</div>
