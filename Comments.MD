@@ -1,3 +1,22 @@
+### Datos Hardcodeados o Content Collection
+*Comentario sin un comment dentro del código*
+
+Documetación: [Coleción de Contenido](https://docs.astro.build/es/guides/content-collections/)
+
+El manejo de los datos en el fichero `Proyect.astro` se puede hacer de distintas maneras. Una de las formas más básicas es mantener los datos "*hardcodeados*" dentro del fichero, sin embargo no es un método escalable y puede resultar engorroso si se quiere añadir más datos, es una opción valida, pero en este contexto será mejor con una **Coleción de Contenido**
+
+El uso de **Coleciones de Contenido** son la mejor manera de administrar y crear contenido en cualquier proyecto. Las coleciones ayudan a organizar los documentos, validar el `frontmatter` y porporcionar una seguridad de tipo automática de TS para todo el contenido
+
+Una Colección de Contenido es un directorio resrvado como `src/content` del proyecto, en este caso el fichero `src/content/proyects/conserjeria.md` cumple como una coleción.
+Una **entrada de coleción** es cualquier pieza de contenido dentro de el directorio de coleciones de contenido. Las entradas pueden usar formatos de autoría de contenido que incluyen Markdown, MDX, YAML, JSON
+
+Etonces con una coleción de contenido tenemos:
+- Más fácil de mantener
+- Añadir metadatos (frontmatter)
+- Beneficio del hot-reloading
+- Mejor para SEO
+
+
 ### C01: Esquemas de colores soportables
 La propiedad `color-sheme` es una característica de CSS, con ella se le indica al navegador qué esquemas de color soporta el sitio, haciendo una mejor integración con las preferencias del sistema operativo.
 
@@ -21,6 +40,9 @@ Las ventajas de utilizarlas son:
 
 ### C03: Componente Contenedor
 Para poder manejar de mejor manera los proyecto se decide utilizar un "componente contenedor".
+- **Proyect.astro**: es el componente contenedor (maneja la lógica y datos)
+- **ProyectItem.astro**: es el componente presentacional (maneja la UI)
+Con esto mejora la organización de código, se puede reutilizar `ProyectItem` en otros lugares y mantiene la separácion clara de responsabilidades
 
 #### `ProyectItem.astro`: 
 Es un componente de presentación (`presentational component`):
