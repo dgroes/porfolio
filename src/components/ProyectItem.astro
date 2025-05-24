@@ -3,43 +3,66 @@ interface Props {
   title: string;
   description: string;
   functionality: string[];
-  link?: string;
   images: Array<{ src: string; alt: string }>;
+  languages: string[];
+  github?: string;
 }
-const { title, description, functionality, link, images } = Astro.props;
-const carouselId = title.toLowerCase().replace(/\s+/g, '-'); // Genera un ID único para el carrusel basado en el título
+const { title, description, functionality, images, languages, github } =
+  Astro.props;
+const carouselId = title.toLowerCase().replace(/\s+/g, "-"); // Genera un ID único para el carrusel basado en el título
 ---
 
 <article
-  class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6 my-4"
+  class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl 
+         shadow-lg grid grid-cols-1 md:grid-cols-[1fr_2fr]  gap-6 p-6 my-4
+        "
+
 >
   <section class="carousel-container relative">
     <ul class="carousel" role="list">
       <!-- Mapeo de imagenes, (si hay menos de 3, repite la última) -->
-      {Array.from({ length: 3 }).map((_, index) => {
-      const image = images[Math.min(index, images.length - 1)];
-      return (
-        <li id={`${carouselId}-slide${index + 1}`}> {/* <--ID único */}
-          <img src={image.src} alt={image.alt} class="carousel-img" />
-        </li>
-      );
-    })}
+      {
+        Array.from({ length: 3 }).map((_, index) => {
+          const image = images[Math.min(index, images.length - 1)];
+          return (
+            <li id={`${carouselId}-slide${index + 1}`}>
+              {" "}
+              {/* <--ID único */}
+              <img src={image.src} alt={image.alt} class="carousel-img" />
+            </li>
+          );
+        })
+      }
     </ul>
-    
 
     <!-- Controles del carrusel -->
-     <div class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-    {Array.from({ length: 3 }).map((_, index) => (
-      <a
-        href={`#${carouselId}-slide${index + 1}`}
-        class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-      />
-    ))}
-  </div>
+    <div
+      class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
+    >
+      {
+        Array.from({ length: 3 }).map((_, index) => (
+          <a
+            href={`#${carouselId}-slide${index + 1}`}
+            class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+          />
+        ))
+      }
+    </div>
   </section>
 
   <div>
     <h1 class="text-3xl font-bold mb-1">{title}</h1>
+
+    <div class="flex flex-wrap gap-2">
+      {
+        languages.map((language) => (
+          <span class="bg-[#ac70c4] text-white rounded-full px-3 py-1 text-sm font-semibold">
+            {language}
+          </span>
+        ))
+      }
+    </div>
+
     <p class="text-xl mb-2">
       {description}
     </p>
@@ -48,6 +71,6 @@ const carouselId = title.toLowerCase().replace(/\s+/g, '-'); // Genera un ID ún
     <ul class="grid grid-cols-2 gap-2 my-4">
       {functionality.map((item) => <li class="">{item}</li>)}
     </ul>
-    <a href={link} class="text-[#ac70c4]">Mas sobre el proyecto</a>
+    <a href={github} class="text-[#ac70c4]">Mas sobre el proyecto</a>
   </div>
 </article>

@@ -4,22 +4,20 @@ import ProyectItem from "./ProyectItem.astro";
 import { getCollection } from "astro:content";
 
 // Obtener la colección de proyectos
+// Importar el componente Proyect
+import type { CollectionEntry } from "astro:content";
 const proyects = await getCollection("proyects");
 ---
 
-<!-- <article
-  class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6 my-4"
-> -->
-{
-    proyects.map((proyect) => (
-        <ProyectItem
-            title={proyect.data.title}
-            description={proyect.data.description}
-            functionality={proyect.data.functionality}
-            link={proyect.data.link}
-            images={proyect.data.images}
-        />
-    ))
+{proyects.map((proyect: CollectionEntry<"proyects">) => (
+    <ProyectItem
+      title={proyect.data.title}
+      description={proyect.data.description}
+      functionality={proyect.data.functionality}
+      images={proyect.data.images}
+      languages={proyect.data.languages}
+      github={proyect.data.github}
+    />
+  ))
 }
 
-<!-- </article> -->
