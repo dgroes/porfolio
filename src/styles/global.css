@@ -34,6 +34,14 @@
   font-display: swap;
 }
 
+/* C05: Clase de Tailwind personalizada */
+@layer components {
+  .transition-smooth {
+    @apply transition-all delay-75 duration-100 ease-in-out hover:-translate-y-1 hover:scale-110;
+  }
+}
+  
+
 /* C01: Esquemas de colores soportables */
 :root {
   color-scheme: light dark;
