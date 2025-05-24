@@ -1,47 +1,25 @@
 ---
 /* C03: Componente Contenedor */
 import ProyectItem from "./ProyectItem.astro";
-const PROYECT = [
-  {
-    title: "Gestión de Conserjería",
-    description:
-      "Aplicación web para la gestión de conserjería en edificios, incluyendo registro de visitantes y control de acceso.",
-    functionality: [
-      // Deberían ser 6 para mantener el diseño
-      "Registro de visitantes",
-      "Control de acceso",
-      "Gestión de usuarios",
-      "Notificaciones",
-      "Gestión de incidencias",
-      "Reportes y estadísticas",
-    ],
-    images: [
-      {
-        src: "/images/proyects/conserjeria.png",
-        alt: "Gestión de Conserjería",
-      },
-      {
-        src: "/images/proyects/conserjeria2.png",
-        alt: "Gestión de Conserjería",
-      },
-      {
-        src: "/images/proyects/conserjeria3.png",
-        alt: "Gestión de Conserjería",
-      },
-    ],
-    link: "https://github.com/dgroes/LUDENS",
-  },
-];
+import { getCollection } from "astro:content";
+
+// Obtener la colección de proyectos
+const proyects = await getCollection("proyects");
 ---
 
-<article
+<!-- <article
   class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6 my-4"
->
+> -->
 {
-    PROYECT.map((proyect) => (
-      <ProyectItem {...proyect} />
-      
+    proyects.map((proyect) => (
+        <ProyectItem
+            title={proyect.data.title}
+            description={proyect.data.description}
+            functionality={proyect.data.functionality}
+            link={proyect.data.link}
+            images={proyect.data.images}
+        />
     ))
 }
 
-</article>
+<!-- </article> -->
