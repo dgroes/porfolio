@@ -15,6 +15,10 @@ images:
     alt: "Listado de visitantes"
   - src: "/images/momo.jpg"
     alt: "Listado de visitantes"
-
-link: "https://github.com/dgroes/LUDENS"
+languages:
+  - Laravel
+  - TypeScript
+  - Astro
+  - CSS
+github: "https://github.com/dgroes/LUDENS"
 ---

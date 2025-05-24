@@ -15,6 +15,11 @@ images:
     alt: "Listado de visitantes"
   - src: "/images/proyecto-prueba.avif"
     alt: "Listado de visitantes"
-
-link: "https://github.com/dgroes/LUDENS"
+    # Lenguajes
+languages:
+  - JavaScript
+  - TypeScript
+  - HTML
+  - CSS
+github: "https://github.com/dgroes/LUDENS"
 ---
