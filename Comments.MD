@@ -67,4 +67,24 @@ Componente Page (`Page Component`)
 Con separar la lógica con componentes contenedor se obtiene lo siguiente:
 - Separación de responsabilidades: Cada componente tiene una única tarea.
 - Reutilización: se puede usar `ProyecItem` en otros contexto sin reescribirlo.
-s
+
+
+### C04: Biblioteca de validación de Schema
+`z` Es el objeto principal de la biblioteca `Zod`, una librería de validación de esquemas para TS que Astro integra directamente en `astro:content`.
+Esta librería se utiliza para validar esquemás de datos con TS, en Astro se utiliza para:
+- Validar el forntmatter de los archivos `.md`
+- Generar tipo automáticos para las colecciones
+- Asegurar que los datos cumplan ciertas reglas.
+- TS First: Genera tipos automáticamente.
+- Validación en tiempo de compilación: Si un .`md` no cumple el esquema, Astro muestra un error.
+- Seguridad: Previenen datos malformados.
+
+Entonces Zod es una herramienta para trabajar con datos en TS y Astro lo integra de forma nativa para las coleciones de contenido.
+
+### C05: Clase de Tailwind personalizada
+`@apply` es una directiva de Tailwind CSS que permite aplicar clases de utilidad a un selector CSS personalizado. Esto es útil para crear estilos reutilizables y mantener el código limpio.
+- Permite combinar múltiples clases de utilidad en una sola regla CSS.
+- Se utiliza dentro de un bloque CSS normal, lo que permite crear estilos personalizados.
+- Ayuda a evitar la repetición de clases en el HTML.
+
+Dentro de `global.css` está la clase `.transition-smooth`, creada para aplicar ahora dentro y junto a las otras clases de Tailwind, como se puede ver en los enlaces del `header` y `footer` o en el `Badge`
