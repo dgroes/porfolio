@@ -1,18 +1,20 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Proyect from "../components/Proyect.astro";
+import Footer from "../components/Footer.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+//Importación de iconos (componets)
+import ProyectIcon from "../components/icons/ProyectIcon.astro";
+import AboutIcon from "../components/icons/AboutIcon.astro";
 ---
 
 <Layout title="Portafolio de Diego Pastén - Desarrollador web">
   <main>
+
+    <!-- Titulo -->
     <SectionContainer>
     
       <img
@@ -43,18 +45,29 @@ import Proyect from "../components/Proyect.astro";
     
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2 class="text-6xl font-bold mt-8 mb-3">Proyectos</h2>
-     <Proyect/>
+    <!-- Sección de Proyectos -->
+    <SectionContainer id="proyectos" class="pt-10">
+      <h2 class="text-6xl font-bold mt-8 mb-3 flex gap-2"> <ProyectIcon class="size-16" />Proyectos </h2>
+      <Proyect/>
      
     </SectionContainer>
     
-    <SectionContainer id="sobre-mi">
-      <h2 class="text-6xl font-bold mt-8 mb-3">Sobre mi</h2>
+    <!-- Sección sobre mi -->
+    <SectionContainer id="sobre-mi" class="pt-10">
+      <h2 class="text-6xl font-bold mt-8 mb-3 flex gap-2"><AboutIcon class="size-16"/> Sobre mí</h2>
       <p class="text-2xl opacity-75">
         Titulado como Ingerniero en Informática Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis vero doloremque recusandae, nemo beatae quos, totam iusto enim possimus in ipsam porro sapiente tempora odio perferendis dolore fugit modi laboriosam!
       </p>
     </SectionContainer>
+
+    <!-- Sección de Contacto -->
+
+    <!-- Sección Footer -->
+     <SectionContainer id="footer">
+      <Footer/>
+     </SectionContainer>
+
+
 
   </main>
 </Layout>
