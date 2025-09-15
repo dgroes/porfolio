@@ -30,7 +30,6 @@ La propiedad `color-sheme` es una característica de CSS, con ella se le indica 
 
 #### Es útil
 Es una propiedad útil, ya que los elementos nativos del navegador se adaptarán al modo claro/oscuro automáticamente, mejorando el rendimiento al aplicar los estilos nativos más efeicientemente
-
 ### C02: Margin Block lh
 El uso de `margin-block: 1lh` en un elemento `<p>` es una técnica moderna y considerada una buena práctica.
 Las ventajas de utilizarlas son:
