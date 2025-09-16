@@ -13,8 +13,6 @@ import AboutIcon from "../components/icons/AboutIcon.astro";
 
 <Layout title="Portafolio de Diego Pastén - Desarrollador web">
   <main>
-
-    <!-- Titulo -->
     <SectionContainer>
       <img
         src="/images/perfil.png"
@@ -47,10 +45,138 @@ import AboutIcon from "../components/icons/AboutIcon.astro";
     </SectionContainer>
 
     <!-- Sección de Proyectos -->
-    <SectionContainer id="proyectos" class="pt-10">
-      <h2 class="text-6xl font-bold mt-8 mb-3 flex gap-2"> <ProyectIcon class="size-16" />Proyectos </h2>
-      <Proyect/>
-     
+    <SectionContainer id="proyectos">
+      <h2 class="text-6xl font-bold mt-8 mb-3">Proyectos</h2>
+      <article
+        class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6 my-4"
+      >
+        <section class="carousel-container relative">
+          <ul class="carousel" role="list">
+            <li id="slide1">
+              <img
+                src="/images/citas_medicas_01.png"
+                alt="Imagen 1"
+                class="carousel-img"
+              />
+            </li>
+            <li id="slide2">
+              <img
+                src="/images/02.png"
+                alt="Imagen 2"
+                class="carousel-img"
+              />
+            </li>
+            <li id="slide3">
+              <img
+                src="/images/proyecto-prueba.avif"
+                alt="Imagen 3"
+                class="carousel-img"
+              />
+            </li>
+          </ul>
+
+          <div
+            class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
+          >
+            <!-- Cambios aquí -->
+            <a
+              href="#slide1"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+            <a
+              href="#slide2"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+            <a
+              href="#slide3"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+          </div>
+        </section>
+
+        <div>
+          <h1 class="text-3xl font-bold mb-1">Citas Médicas</h1>
+          <p class="text-xl mb-2">
+            Gestión de agendado de citas médicas. Orientado a pacientes, doctores y recepcionistas. Con agendado
+          </p>
+
+          <ul class="grid grid-cols-2 gap-2 my-4">
+            <li>Dashboard de datos</li>
+            <li>Busca de horarios de atenciones</li>
+            <li>CSS Variable </li>
+            <li>Color Variations</li>
+            <li>Accessibility Tools</li>
+            <li>Tailwind Integration</li>
+          </ul>
+          <a href="#C" class="text-[#ac70c4]">Mas sobre el proyecto</a>
+        </div>
+      </article>
+
+      <article
+        class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6"
+      >
+        <section class="carousel-container relative">
+          <ul class="carousel" role="list">
+            <li id="slide1">
+              <img
+                src="/images/proyecto-prueba.avif"
+                alt="Imagen 1"
+                class="carousel-img"
+              />
+            </li>
+            <li id="slide2">
+              <img
+                src="/images/proyecto-prueba.avif"
+                alt="Imagen 2"
+                class="carousel-img"
+              />
+            </li>
+            <li id="slide3">
+              <img
+                src="/images/proyecto-prueba.avif"
+                alt="Imagen 3"
+                class="carousel-img"
+              />
+            </li>
+          </ul>
+
+          <div
+            class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
+          >
+            <!-- Cambios aquí -->
+            <a
+              href="#slide1"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+            <a
+              href="#slide2"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+            <a
+              href="#slide3"
+              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
+            ></a>
+          </div>
+        </section>
+
+        <div>
+          <h1 class="text-3xl font-bold mb-1">Advanced Color Tools</h1>
+          <p class="text-xl mb-2">
+            Take your color palette to the next level with our comprehensive
+            suite of tools designed for both beginners and professionals.
+          </p>
+
+          <ul class="grid grid-cols-2 gap-2 my-4">
+            <li>Real-time Preview</li>
+            <li>Contrast Checking</li>
+            <li>CSS Variable Export</li>
+            <li>Color Variations</li>
+            <li>Accessibility Tools</li>
+            <li>Tailwind Integration</li>
+          </ul>
+          <a href="#C" class="text-[#ac70c4]">Mas sobre el proyecto</a>
+        </div>
+      </article>
     </SectionContainer>
     
     <!-- Sección sobre mi -->
