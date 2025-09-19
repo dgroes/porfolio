@@ -48,6 +48,13 @@
   --color-primary: #ffbed8;
 }
 
+::selection {
+    background: #d67da0;
+    color: black;
+    text-shadow: none;
+}
+
+
 h1, h2{
   font-family: "GeneralSans";
 }
@@ -120,6 +127,8 @@ header {
 .perfil-con-difuminado {
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 
