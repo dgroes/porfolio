@@ -1,0 +1,37 @@
+---
+import Badge from "../Badge.astro";
+import SectionContainer from "../SectionContainer.astro";
+---
+
+<SectionContainer>
+  <div class="flex items-center relative">
+    <h1
+      class="text-white text-7xl font-bold flex flex-row gap-x-4 pb-4 relative z-10"
+    >
+      Diego Pastén
+    </h1>
+
+    <!-- <img
+          src="/images/perfil.png"
+          alt="Foto de perfil"
+          class="perfil-con-difuminado absolute right-0 z-0 h-40"
+        /> -->
+  </div>
+
+  <div class="flex gap-5 mt-2 absolute">
+    <span class="text-xl text-[#ffbed8]">Desarrollador WEB</span>
+    <a
+      href="https://linkedin.com/in/diegopastenuribe"
+      target="_blank"
+      rel="noopener"
+      class="flex justify-center items-center"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <p class="text-2xl opacity-75">
+    Ingeniero en Informática con experiencia en <strong>Desarrollo Web</strong> y QA,
+    aplicando métodologías agiles con BackEnd y FrontEnd. Dispuesto a ser parte de un 
+    equipo aportanto valor con conocimientos, capacidad de análisis y compromiso con la mejora continua
+  </p>
+</SectionContainer>

@@ -9,186 +9,28 @@ import Footer from "../components/Footer.astro";
 //Importación de iconos (componets)
 import ProyectIcon from "../components/icons/ProyectIcon.astro";
 import AboutIcon from "../components/icons/AboutIcon.astro";
+
+// Importación de las distintas secciones del portafolio
+import Hero from "../components/sections/Hero.astro";
+import Projects from "../components/sections/Projects.astro";
+import About from "../components/sections/About.astro";
+import Work from "../components/sections/Work.astro";
 ---
 
 <Layout title="Portafolio de Diego Pastén - Desarrollador web">
   <main>
-    <SectionContainer>
-      <img
-        src="/images/perfil.png"
-        alt="Foto de perfil"
-        class="perfil-con-difuminado"
-      />
+    <!-- C06: Separación de código -->
 
-      <h1 class="text-white text-7xl font-bold flex flex-row gap-x-4 pb-4">
-        Diego Pastén
-      </h1>
+    <!-- Sección de perfil -->
+    <Hero />
 
-      <div class="flex gap-5 mt-2">
-        <span class="text-xl text-[#ffbed8]">Desarrollador WEB</span>
-        <a
-          href="https://linkedin.com/in/diegopastenuribe"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </div>
-      <p class="text-2xl opacity-75">
-        Ingeniero en Informática con experiencia en WEB Developer Lorem ipsum,
-        dolor sit amet consectetur adipisicing elit. Ut accusantium soluta vitae
-        corporis minus magni libero fugit expedita aperiam asperiores.
-        Temporibus velit voluptate cum nemo quis dignissimos ipsum, consequuntur
-        optio!
-      </p>
-    </SectionContainer>
+    <!-- Sección de Experiencia Laboral -->
+    <Work/>
 
     <!-- Sección de Proyectos -->
-    <SectionContainer id="proyectos">
-      <h2 class="text-6xl font-bold mt-8 mb-3">Proyectos</h2>
-      <article
-        class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6 my-4"
-      >
-        <section class="carousel-container relative">
-          <ul class="carousel" role="list">
-            <li id="slide1">
-              <img
-                src="/images/citas_medicas_01.png"
-                alt="Imagen 1"
-                class="carousel-img"
-              />
-            </li>
-            <li id="slide2">
-              <img
-                src="/images/02.png"
-                alt="Imagen 2"
-                class="carousel-img"
-              />
-            </li>
-            <li id="slide3">
-              <img
-                src="/images/proyecto-prueba.avif"
-                alt="Imagen 3"
-                class="carousel-img"
-              />
-            </li>
-          </ul>
+    <Projects />
 
-          <div
-            class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
-          >
-            <!-- Cambios aquí -->
-            <a
-              href="#slide1"
-              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-            ></a>
-            <a
-              href="#slide2"
-              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-            ></a>
-            <a
-              href="#slide3"
-              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-            ></a>
-          </div>
-        </section>
-
-        <div>
-          <h1 class="text-3xl font-bold mb-1">Citas Médicas</h1>
-          <p class="text-xl mb-2">
-            Gestión de agendado de citas médicas. Orientado a pacientes, doctores y recepcionistas. Con agendado
-          </p>
-
-          <ul class="grid grid-cols-2 gap-2 my-4">
-            <li>Dashboard de datos</li>
-            <li>Busca de horarios de atenciones</li>
-            <li>CSS Variable </li>
-            <li>Color Variations</li>
-            <li>Accessibility Tools</li>
-            <li>Tailwind Integration</li>
-          </ul>
-          <a href="#C" class="text-[#ac70c4]">Mas sobre el proyecto</a>
-        </div>
-      </article>
-
-      <article
-        class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid grid-cols-[1fr_2fr] gap-6 p-6"
-      >
-        <section class="carousel-container relative">
-          <ul class="carousel" role="list">
-            <li id="slide1">
-              <img
-                src="/images/proyecto-prueba.avif"
-                alt="Imagen 1"
-                class="carousel-img"
-              />
-            </li>
-            <li id="slide2">
-              <img
-                src="/images/proyecto-prueba.avif"
-                alt="Imagen 2"
-                class="carousel-img"
-              />
-            </li>
-            <li id="slide3">
-              <img
-                src="/images/proyecto-prueba.avif"
-                alt="Imagen 3"
-                class="carousel-img"
-              />
-            </li>
-          </ul>
-
-          <div
-            class="carousel-controls absolute bottom-4 left-0 right-0 flex justify-center gap-2"
-          >
-            <!-- Cambios aquí -->
-            <a
-              href="#slide1"
-              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-            ></a>
-            <a
-              href="#slide2"
-              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-            ></a>
-            <a
-              href="#slide3"
-              class="w-3 h-3 rounded-full bg-white opacity-60 hover:opacity-100"
-            ></a>
-          </div>
-        </section>
-
-        <div>
-          <h1 class="text-3xl font-bold mb-1">Advanced Color Tools</h1>
-          <p class="text-xl mb-2">
-            Take your color palette to the next level with our comprehensive
-            suite of tools designed for both beginners and professionals.
-          </p>
-
-          <ul class="grid grid-cols-2 gap-2 my-4">
-            <li>Real-time Preview</li>
-            <li>Contrast Checking</li>
-            <li>CSS Variable Export</li>
-            <li>Color Variations</li>
-            <li>Accessibility Tools</li>
-            <li>Tailwind Integration</li>
-          </ul>
-          <a href="#C" class="text-[#ac70c4]">Mas sobre el proyecto</a>
-        </div>
-      </article>
-    </SectionContainer>
-    
     <!-- Sección sobre mi -->
-    <SectionContainer id="sobre-mi" class="pt-10">
-      <h2 class="text-6xl font-bold mt-8 mb-3 flex gap-2"><AboutIcon class="size-16"/> Sobre mí</h2>
-      <p class="text-2xl opacity-75">
-        Titulado como Ingerniero en Informática Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Corporis vero doloremque recusandae, nemo
-        beatae quos, totam iusto enim possimus in ipsam porro sapiente tempora
-        odio perferendis dolore fugit modi laboriosam!
-      </p>
-    </SectionContainer>
-
+    <About />
   </main>
 </Layout>
