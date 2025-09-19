@@ -1,4 +1,5 @@
-//C04: Biblioteca de validación de Schema
+// C04: Biblioteca de validación de Schema
+// C07: Content Collections
 // Importar utilidades de `astro:content`
 import { defineCollection, z } from "astro:content";
 
@@ -6,6 +7,7 @@ const proyectsCollection  = defineCollection({
     // Definir el esquema de contenido para la colección
     schema: z.object({
         // Definir los campos del esquema
+        id: z.number(),
         title: z.string(),
         description: z.string(),
         functionality: z.array(z.string()),
@@ -23,5 +25,5 @@ const proyectsCollection  = defineCollection({
 
 // Exportar las colecciones definidas
 export const collections = {
-  proyects: proyectsCollection,
+  projects: proyectsCollection,
 };
