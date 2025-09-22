@@ -1,9 +1,11 @@
 // C04: Biblioteca de validación de Schema
 // C07: Content Collections
+
 // Importar utilidades de `astro:content`
 import { defineCollection, z } from "astro:content";
 
-const proyectsCollection  = defineCollection({
+// Colección de proyectos 👷
+const proyectsCollection = defineCollection({
     // Definir el esquema de contenido para la colección
     schema: z.object({
         // Definir los campos del esquema
@@ -23,7 +25,31 @@ const proyectsCollection  = defineCollection({
     }),
 });
 
+// Colección de de experiencias laborales 💼
+const experiencesCollection = defineCollection({
+    schema: z.object({
+        id: z.number(),
+        company: z.array(z.string()),
+        position: z.string(),
+        status: z.number(),
+        webPage: z.string().url(),
+        starDate: z.string(),
+        endDate: z.string().optional(),
+        duties: z.array(z.string()),
+        responsibilities: z.array(z.string()),
+        toolsIcons: z.array(
+            z.object({
+                src: z.string(),
+                alt: z.string(),
+            })
+        ),
+
+    })
+});
+
+
 // Exportar las colecciones definidas
 export const collections = {
-  projects: proyectsCollection,
+    projects: proyectsCollection,
+    experiences: experiencesCollection,
 };
