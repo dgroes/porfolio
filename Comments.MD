@@ -237,7 +237,8 @@ projects.map((project: Project) => (
 ))
 ```
 Lo que se hace es un recorrido de todos los proyectos y renderizando la info en el DOM. Astro a este punto ya está consiente del tipado exacto de cada campo gracias al esquema de `config.ts`.
-## C11:
+## C11: Iconos
+Para la obtención de iconos se optó por descargarlos y añadirlos manualmente dentro de `public/icons`. El sitio en cuestión es [Simple Icons](https://simpleicons.org/). Allí hay muchos iconos a utilizar. Los iconos vienen en formato `.svg`, **por defecto en color negro**. Para solventar el tema del color está la página [SVGViewer](https://www.svgviewer.dev/s/457385/tic-tac-toe) la cual es una **herramienta de edición y optimización de ficheros `.svg`**. Pero si se busca cambiar el color de una manera más sencilla, está [deeditor](https://deeditor.com/), **sencillo para cambiar el color de un** `.svg`.
 ## C12:
 ## C13:
 ## C14:
