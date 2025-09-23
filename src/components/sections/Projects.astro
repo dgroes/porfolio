@@ -12,12 +12,12 @@ const projects: Project[] = (await getCollection("projects")).sort(
 ---
 
 <SectionContainer id="proyectos">
-  <h2 class="text-6xl font-bold mb-3">Proyectos</h2>
+  <h2 class="text-6xl font-bold mb-3">
+    Proyecto 🗂️
+  </h2>
   {
     projects.map((project: Project) => (
-      <article
-        class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid md:grid-cols-[1fr_2fr] gap-6 p-6 my-4"
-      >
+      <article class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg grid md:grid-cols-[1fr_2fr] gap-6 p-6 my-4">
         <section class="carousel-container relative">
           <ul class="carousel" role="list">
             {project.data.images.map(
@@ -44,9 +44,9 @@ const projects: Project[] = (await getCollection("projects")).sort(
         </section>
 
         <div>
-          <h1 class="text-3xl font-bold mb-1">{project.data.title}</h1>
+          <h1 class="text-3xl font-bold">{project.data.title}</h1>
 
-          <p class="text-xl mb-2">{project.data.description}</p>
+          <p class="text-xl mb-1">{project.data.description}</p>
 
           <ul class="grid grid-cols-2 gap-2 my-4">
             {project.data.functionality.map((item: string) => (
