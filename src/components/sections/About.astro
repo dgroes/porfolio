@@ -1,15 +1,38 @@
 ---
 import AboutIcon from "../icons/AboutIcon.astro";
 import SectionContainer from "../SectionContainer.astro";
+
+import { getCollection } from "astro:content";
+const technologies = await getCollection("technologies");
 ---
 
-<SectionContainer id="sobre-mi" class="pt-10">
-  <h2 class="text-6xl font-bold mt-8 mb-3 flex gap-2">
-    <AboutIcon class="size-16" /> Sobre mí
-  </h2>
+<SectionContainer id="sobre-mi">
+  <h2 class="text-6xl font-bold mt-8 mb-3 flex gap-2">Sobre mí 👋🏻</h2>
   <p class="text-2xl opacity-75">
-    Titulado como <strong>Ingeniero en Informática</strong>, con experiencia en gestión y desarrollo de proyectos. Manejo tango frontend como backend, aplicando metodologías ágiles. Además con experiencia laboral en QA, lo que aporta un aporte a la hora de seguir y mantener la calidad esperada durante la fase de desarrollo.
-    <br>
-    Durante el tiempo libre me gusta hacer música y leer, tratando de siempre agregar lo aprendido a los conocimientos de la programación
+    Titulado como <strong>Ingeniero en Informática</strong>, con experiencia en
+    gestión y desarrollo de proyectos. Manejo tango frontend como backend,
+    aplicando metodologías ágiles. Además con experiencia laboral en QA, lo que
+    aporta un aporte a la hora de seguir y mantener la calidad esperada durante
+    la fase de desarrollo.
+    <br />
+    Durante el tiempo libre me gusta hacer música y leer, tratando de siempre agregar
+    lo aprendido al labito laboral.
   </p>
+
+  <article>
+    <h3 class="text-6xl font-semibold mb-8">Herramientas 🛠️</h3>
+    <div>
+     <div class="flex flex-wrap justify-center gap-x-6 gap-y-6 max-w-5xl mx-auto">
+    
+      {
+        technologies.length > 0 && technologies[0].data.icons ? (
+          technologies[0].data.icons.map((icon: any) => (
+            <img src={icon.src} alt={icon.alt} class="w-36 h-36 transition-smooth" />
+          ))
+        ) : (
+          <p>No se encontraron íconos 😞</p>
+        )
+      }
+    </div>
+  </article>
 </SectionContainer>

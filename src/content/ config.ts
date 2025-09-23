@@ -47,9 +47,23 @@ const experiencesCollection = defineCollection({
     })
 });
 
+// Colección de lenguajes y heramientas(que manejo) 🛠️
+const technologiesCollection = defineCollection({
+  type: 'content', // ¡Esto es importante!
+  schema: z.object({
+    name: z.string(),
+    icons: z.array(
+      z.object({
+        src: z.string(),
+        alt: z.string(),
+      })
+    ),
+  })
+});
 
 // Exportar las colecciones definidas
 export const collections = {
     projects: proyectsCollection,
     experiences: experiencesCollection,
+    technologies: technologiesCollection,
 };

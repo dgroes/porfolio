@@ -1,0 +1,22 @@
+---
+name: "Lenguajes y Herramientas"
+icons:
+  - src: "/icons/laravel.svg"
+    alt: "laravel"
+  - src: "/icons/python.svg"
+    alt: "python"
+  - src: "/icons/javascript.svg"
+    alt: "javascript"
+  - src: "/icons/typescript.svg"
+    alt: "typescript"
+  - src: "/icons/astro.svg"
+    alt: "astro"
+  - src: "/icons/php.svg"
+    alt: "php"
+  - src: "/icons/mysql.svg"
+    alt: "mysql"
+  - src: "/icons/git.svg"
+    alt: "git"
+  - src: "/icons/github.svg"
+    alt: "github"
+---
