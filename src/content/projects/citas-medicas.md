@@ -9,7 +9,7 @@ functionality:
   - Gestión de citas (agendar, cancelar y aplazar)
   - Reportes médicos con síntomas, observaciones y tratamientos
 images:
-  - src: "/images/citas_medicas_01.png"
+  - src: "/images/16-9.png"
     alt: "Pantalla principal"
   - src: "/images/02.png"
     alt: "Listado de visitantes"

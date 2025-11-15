@@ -131,7 +131,7 @@ header {
   transform: scaleX(-1);
 }
 
-
+/* 
 .carousel-container {
   width: 100%;
   max-width: 400px;
@@ -145,11 +145,11 @@ header {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Chrome */
+  display: none;
 }
 
 .carousel li {
@@ -157,8 +157,19 @@ header {
   flex: 0 0 100%;
   scroll-snap-align: center;
   list-style: none;
-  aspect-ratio: 1 / 1; /* Cuadrado perfecto */
-  overflow: hidden; /* Para que no se vea fuera del cuadrado */
+  aspect-ratio: 1 / 1;
+  overflow: hidden; 
+} */
+/* En normal es aspect-ratio es de 1 / 1, pero cuango están la pantalla a md sería el li más horizontal, tipo 16:9
+ */
+/* @media (min-width: 768px) {
+
+  .carousel li {
+    aspect-ratio: 16 / 9;
+  }
+  .carousel-img {
+    width: 800PX;
+  }
 }
 
 .carousel-img {
@@ -166,13 +177,8 @@ header {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Aquí está el cambio importante */
+  object-fit: cover;
   border-radius: 0.5rem;
-}
-
-
-.carousel img{
-  /* height: 200px; */
 }
 
 .carousel-controls {
@@ -194,4 +200,109 @@ header {
 
 .carousel-controls a:hover {
   background-color: #bbb;
+} */
+
+/* Contenedor principal del carrusel */
+.project-carousel {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Lista del carrusel */
+.carousel-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Items del carrusel */
+.carousel-item {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  /* Aspect ratio responsive */
+  aspect-ratio: 1 / 1 /* Cuadrado en móvil */
+}
+
+/* Imágenes del carrusel */
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Navegación (dots) */
+.carousel-navigation {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.carousel-dot:hover {
+  opacity: 1;
+}
+
+/* Responsive - Desktop */
+@media (min-width: 600px) {
+  .carousel-item {
+    aspect-ratio: 1 / 1; /* Rectangular en desktop */
+  }
+  
+  .project-carousel {
+    max-width: 100%; /* Un poco más grande en desktop */
+  }
+}
+
+@media (max-width: 1024px) {
+  .carousel-item {
+    aspect-ratio: 16 / 9; /* Rectangular en desktop */
+  }
+  
+  .project-carousel {
+    max-width: 100%; /* Un poco más grande en desktop */
+  }
+}
+
+
+
+
+
+/* Responsive - Pantallas grandes */
+@media (min-width: 1024px) {
+  .project-carousel {
+    max-width: 600px;
+  }
 }
