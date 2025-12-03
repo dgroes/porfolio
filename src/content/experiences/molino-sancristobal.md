@@ -3,7 +3,7 @@ id: 1
 company: "Molinera San Cristobal"
 position: 
   - "Desarrollador BI"
-status: 0
+status: 1
 webPage: "https://www.sancristobal.cl/"
 starDate: Octubre 2025
 endDate: Actualidad
@@ -35,16 +35,15 @@ duties:
 
 responsibilities:
   - Creación de cubos OLAP multidimencionales 
-  - Creación y gestio de bases de datos
-  - Redacción y ejecución de Casos de pruebas.
-  - Reacción de defectos.
+  - Creación y gestión de bases de datos
+  - Documentar avances
+  - 
+
 toolsIcons:
   - src: "/public/icons/git.svg"
     alt: "git"
-  - src: "/public/icons/github2.svg"
-    alt: "github"
   - src: "/public/icons/mysql3.svg"
-    alt: "mysql"
+    alt: "SQL"
   - src: "/public/icons/dotnet3.svg"
     alt: "dotnet"
 ---
