@@ -17,7 +17,7 @@ const experiences: Experience[] = (await getCollection("experiences")).sort(
   <!-- Renderizar las experiencias -->
   {
     experiences.map((experience: Experience) => (
-      <section>
+      <section class="mb-12">
         {/* Detalle del trabajo */}
         <div class="flex gap-2 items-center mb-2">
           <a href={experience.data.webPage} target="_blank" class="transition-smooth">
